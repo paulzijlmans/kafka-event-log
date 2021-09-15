@@ -18,9 +18,6 @@ public class ProducerDemo {
     Properties properties = new Properties();
     properties.put("bootstrap.servers", "localhost:9093");
     properties.put("security.protocol", "PLAINTEXT");
-//    properties.put("sasl.jaas.config","");
-//    properties.put("ssl.endpoint.identification.algorithm", "http");
-//    properties.put("sasl.mechanism", "PLAIN");
     properties.put("retries", 3);
 
     Producer<String, String> producer = new KafkaProducer<>(properties, new StringSerializer(),
